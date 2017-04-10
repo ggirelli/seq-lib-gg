@@ -58,7 +58,7 @@ complement = function(na, t='DNA') {
 	}
 	compl <- toupper(paste(compl, collapse=''))
 
-	return(compl)
+	return(rev_str(compl))
 }
 
 rc = function(na, t='DNA') {
