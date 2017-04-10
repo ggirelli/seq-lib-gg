@@ -362,7 +362,7 @@ order.simple_match_list.free_energy = function(ml) {
 		} else {
 			return(0)
 		}
-	))))
+	}))))
 }
 
 order.simple_match_list = function(ml, by = 'score', decreasing = F) {
