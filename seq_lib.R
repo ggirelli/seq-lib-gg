@@ -405,7 +405,7 @@ align_fast = function(
 
 		align = function() {
 			# Revert if dimer
-			if ( af$self.dimer ) af$s2 <- complement(af$s1, af$t)
+			if ( af$self.dimer ) af$s2 <- rc(af$s1, af$t)
 			if ( af$hetero.dimer ) af$s2 <- complement(af$s2, af$t)
 
 			# Identify long/short string
@@ -464,6 +464,8 @@ align_fast = function(
 				match_string[chars_contig] <- '|'
 
 				m$match_string <- paste(match_string, collapse='')
+			} else {
+				m$contig$fe <- 0	
 			}
 
 			return(m)
